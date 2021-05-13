@@ -6,6 +6,7 @@ import Title  from './components/Title';
 import Description  from './components/Description';
 import Image  from './components/Image';
 import Favorites  from './components/Favorites';
+import FavoritesButton  from './components/FavoritesButton';
 
 const favoritesSlice = createSlice({
   name: 'favorites',
@@ -64,6 +65,7 @@ class App extends React.Component {
           </div>
           <div style={{width: "25%", margin: "20px"}}>
             <Favorites heroImage={this.state.heroImage} />
+            <FavoritesButton />
           </div>
         </div>
         <Button callApi={this.fetchHero} />

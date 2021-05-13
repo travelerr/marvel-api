@@ -6,8 +6,7 @@ class Favorites extends React.Component {
         return(
             <div>
                 <h1>Favorites</h1>
-
-                <button>Add Current Hero to Favorites</button>
+                
             </div>
         )
     }
