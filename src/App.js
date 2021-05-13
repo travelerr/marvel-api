@@ -1,9 +1,21 @@
 import React from 'react';
+import { createSlice, configureStore } from '@reduxjs/toolkit';
 import axios from 'axios';
 import Button  from './components/Button';
 import Title  from './components/Title';
 import Description  from './components/Description';
 import Image  from './components/Image';
+import Favorites  from './components/Favorites';
+
+const favoritesSlice = createSlice({
+  name: 'favorites',
+  initialState: {
+    favorites: []
+  },
+  reducers: {
+    
+  }
+})
 
 class App extends React.Component {
 
@@ -40,9 +52,20 @@ class App extends React.Component {
     return (
       <div>
         <h1 style={{textAlign: "center"}}> Super Hero Generator </h1>
-        <Title heroName={this.state.heroName} />
-        <Description heroDescription={this.state.heroDescription} />
-        <Image heroImage={this.state.heroImage} />
+        <div style={{display: "flex"}}>
+          <div style={{width: "25%", margin: "20px"}}>
+            <Title heroName={this.state.heroName} />
+          </div>
+          <div style={{width: "25%", margin: "20px"}}>
+            <Description heroDescription={this.state.heroDescription} />
+          </div>
+          <div style={{width: "25%", margin: "20px"}}>
+            <Image heroImage={this.state.heroImage} />
+          </div>
+          <div style={{width: "25%", margin: "20px"}}>
+            <Favorites heroImage={this.state.heroImage} />
+          </div>
+        </div>
         <Button callApi={this.fetchHero} />
       </div>
     );
