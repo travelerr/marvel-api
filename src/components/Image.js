@@ -1,14 +1,14 @@
 import React from 'react';
 
-class Title extends React.Component {
+class Image extends React.Component {
 
     render() {
         return(
             <div>
-                <h1>{this.props.heroName}</h1>
+                <img src={this.props.heroImage} />
             </div>
         )
     }
 }
 
-export default Title;
+export default Image;
