@@ -8,16 +8,6 @@ import Image  from './components/Image';
 import Favorites  from './components/Favorites';
 import FavoritesButton  from './components/FavoritesButton';
 
-const favoritesSlice = createSlice({
-  name: 'favorites',
-  initialState: {
-    favorites: []
-  },
-  reducers: {
-    
-  }
-})
-
 class App extends React.Component {
 
   state = { 
