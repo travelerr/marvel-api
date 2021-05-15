@@ -55,9 +55,7 @@ class App extends React.Component {
           <div style={{width: "25%", margin: "20px"}}>
             <Favorites  />
             <FavoritesButton 
-              heroName={this.state.heroName}
-              heroDescription={this.state.heroDescription} 
-              heroImage={this.state.heroImage}
+              hero={this.state}
             />
           </div>
         </div>
