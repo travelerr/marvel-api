@@ -1,15 +1,22 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import FavoritesItem from '/Users/justinsacco/assesment/marvel/src/components/FavoritesItem.js';
 
-class Favorites extends React.Component {
 
-    render() {
-        return(
-            <div>
-                <h1>Favorites</h1>
-                
-            </div>
-        )
-    }
+const Favorites = () => {
+
+    const favorites = useSelector(state => state)
+    
+    const renderFavoritesList = favorites.map(favorite => {
+        return <FavoritesItem key={favorite.id} favorite={favorite} />
+    })
+    console.log(renderFavoritesList)
+    return(
+         <div>
+           <ul>{renderFavoritesList}</ul>     
+        </div>
+     )
+    
 }
 
 export default Favorites;

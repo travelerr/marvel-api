@@ -1,5 +1,4 @@
 import React from 'react';
-import { createSlice, configureStore } from '@reduxjs/toolkit';
 import axios from 'axios';
 import Button  from './components/Button';
 import Title  from './components/Title';
@@ -54,8 +53,12 @@ class App extends React.Component {
             <Image heroImage={this.state.heroImage} />
           </div>
           <div style={{width: "25%", margin: "20px"}}>
-            <Favorites heroImage={this.state.heroImage} />
-            <FavoritesButton />
+            <Favorites  />
+            <FavoritesButton 
+              heroName={this.state.heroName}
+              heroDescription={this.state.heroDescription} 
+              heroImage={this.state.heroImage}
+            />
           </div>
         </div>
         <Button callApi={this.fetchHero} />

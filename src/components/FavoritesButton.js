@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
-class FavoritesButton extends React.Component {
+const FavoritesButton = () => {
 
-    render() {
+    const dispatch = useDispatch()
+
+    const favoritesHandler = () => {
+        const favoriteHero = {
+           test: "id"
+            
+        }
+        dispatch({ type: 'favorites/favoriteAdded', payload: {
+            heroName: this.props.heroName, 
+            heroDescription: this.props.heroDescription,
+            heroImage: this.prop.heroImage
+            } 
+        })
+    }
+
         return(
             <div>
-               <button>Add Current Hero to Favorites</button>
+               <button onClick>Add Current Hero to Favorites</button>
             </div>
         )
-    }
 }
 
 export default FavoritesButton;

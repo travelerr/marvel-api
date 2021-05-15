@@ -1,12 +1,9 @@
-const initialState = {
-    favorites: [
-
-        { id: 0, heroName: 'Superman', heroDescription: 'Married to Superwoman', heroImage: 'url' },
-        { id: 1, heroName: 'Superman', heroDescription: 'Married to Superwoman', heroImage: 'url' },
-        { id: 2, heroName: 'Superman', heroDescription: 'Married to Superwoman', heroImage: 'url' },
-    
-        ]
-}
+const initialState = [
+    { id: 0, heroName: 'Superman', heroDescription: 'Married to Superwoman', image: 'url' },
+    { id: 1, heroName: 'Superman', heroDescription: 'Married to Superwoman', image: 'url' },
+    { id: 2, heroName: 'Superman', heroDescription: 'Married to Superwoman', image: 'url' },
+    { id: 3, heroName: 'Superman', heroDescription: 'Married to Superwoman', image: 'url' },
+]
 
 function nextFavoriteID (favorites) {
     const maxId = favorites.reduce((maxId, todo) => Math.max(todo.id, maxId), -1)
@@ -25,9 +22,7 @@ export default function rootReducer(state = initialState, action) {
 
                     {
                         id:nextFavoriteID(state.favorites),
-                        heroName: '',
-                        heroDescription: '',
-                        heroImage: ''
+                        hero: action.payload
                     }
                 ]
             }
@@ -36,3 +31,4 @@ export default function rootReducer(state = initialState, action) {
             return state
     }
 }
+
