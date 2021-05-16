@@ -13,6 +13,7 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 
                 action.payload
+            
             ]
         }
         default:

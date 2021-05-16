@@ -1,10 +1,12 @@
 import React from 'react';
 
-const FavoritesItem = ({ favorite }) => {
-    
+const FavoritesItem = ({ favorite, favoriteHandlerProp }) => {
+
     return(
          <div>
-                <h1>{favorite.heroName}</h1> 
+                <button onClick={() => favoriteHandlerProp(favorite.heroName, favorite.heroDescriptio, favorite.heroImage)}>
+                    {favorite.heroName}
+                </button> 
         </div>
      )
     

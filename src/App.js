@@ -8,11 +8,11 @@ import Favorites  from './components/Favorites';
 import FavoritesButton  from './components/FavoritesButton';
 
 class App extends React.Component {
-
+  
   state = { 
     heroName: '',
     heroDescription: '',
-    heroImage: '', 
+    heroImage: '',
    };
 
 
@@ -38,6 +38,11 @@ class App extends React.Component {
       });
   }
 
+  favoriteHandler = (name, description, image) => {
+    this.setState({ heroName: name, heroDescription: description, heroImage: image});
+  }
+
+
   render() {
     return (
       <div>
@@ -53,10 +58,8 @@ class App extends React.Component {
             <Image heroImage={this.state.heroImage} />
           </div>
           <div style={{width: "25%", margin: "20px"}}>
-            <Favorites  />
-            <FavoritesButton 
-              hero={this.state}
-            />
+            <Favorites state={this.state} favoriteHandlerProp={this.favoriteHandler} />
+            <FavoritesButton hero={this.state} />
           </div>
         </div>
         <Button callApi={this.fetchHero} />
