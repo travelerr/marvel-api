@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import FavoritesItem from '/Users/justinsacco/assesment/marvel/src/components/FavoritesItem.js';
+import FavoritesItem from './FavoritesItem';
 
 
 const Favorites = ({state, favoriteHandlerProp}) => {

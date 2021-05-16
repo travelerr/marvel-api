@@ -4,7 +4,7 @@ const FavoritesItem = ({ favorite, favoriteHandlerProp }) => {
 
     return(
          <div>
-                <button onClick={() => favoriteHandlerProp(favorite.heroName, favorite.heroDescriptio, favorite.heroImage)}>
+                <button className="favorites-item" onClick={() => favoriteHandlerProp(favorite.heroName, favorite.heroDescription, favorite.heroImage)}>
                     {favorite.heroName}
                 </button> 
         </div>

@@ -6,6 +6,7 @@ import Description  from './components/Description';
 import Image  from './components/Image';
 import Favorites  from './components/Favorites';
 import FavoritesButton  from './components/FavoritesButton';
+import './App.css';
 
 class App extends React.Component {
   
@@ -48,16 +49,16 @@ class App extends React.Component {
       <div>
         <h1 style={{textAlign: "center"}}> Super Hero Generator </h1>
         <div style={{display: "flex"}}>
-          <div style={{width: "25%", margin: "20px"}}>
+          <div className="one-forth-div" >
             <Title heroName={this.state.heroName} />
           </div>
-          <div style={{width: "25%", margin: "20px"}}>
+          <div className="one-forth-div" >
             <Description heroDescription={this.state.heroDescription} />
           </div>
-          <div style={{width: "25%", margin: "20px"}}>
+          <div className="one-forth-div" >
             <Image heroImage={this.state.heroImage} />
           </div>
-          <div style={{width: "25%", margin: "20px"}}>
+          <div className="one-forth-div flex-div">
             <Favorites state={this.state} favoriteHandlerProp={this.favoriteHandler} />
             <FavoritesButton hero={this.state} />
           </div>
