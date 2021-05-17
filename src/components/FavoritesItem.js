@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FavoritesItem = ({ favorite, favoriteHandlerProp }) => {
+const FavoritesItem = ({ favorite, favoriteHandlerProp}) => {
 
     return(
          <div>
